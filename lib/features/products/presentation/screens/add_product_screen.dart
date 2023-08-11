@@ -100,7 +100,6 @@ class _AddProductScreenState extends State<AddProductScreen> {
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
                             height: 50,
@@ -142,7 +141,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               padding: const EdgeInsetsDirectional.symmetric(
                                   horizontal: 10),
                               child: Text(
-                                "صور المنتج",
+                               _images.isNotEmpty
+                                ?  "صور المنتج" : "",
                                 style: TextStyle(
                                   color: AppColors.black,
                                   fontSize: 16,
